@@ -12,18 +12,23 @@ export default function ProductCategoryPage() {
 
   const { category } = useParams();
 
+ 
+
   console.log(category);
 
   const dispatch = useDispatch();
   const products_in_category = useSelector(state => state.products)
+  const name_categories = useSelector(state => state.categories)
 
  console.log(products_in_category);
 
 useEffect(() => {
      dispatch(load_product(category))
    },[]);
- 
 
+   const NameCtegories= name_categories.length >= 1 ? name_categories[category - 1].title : "";
+ 
+console.log(NameCtegories);
 
   const sort_products = event => dispatch(sortProduct(event.target.value));
 

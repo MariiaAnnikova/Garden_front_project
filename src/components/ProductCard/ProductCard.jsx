@@ -15,6 +15,8 @@ export default function ProductCard({id, title, image, discont_price, price, cou
 
  const add_to_cart = () => dispatch(addToCart({id, title, image, discont_price, price, count}));
 
+ const DiscountPrice = Math.round(((price - discont_price) / price) * 100);
+
 
 return (
    
@@ -29,7 +31,7 @@ return (
 <div className={s.product_price}>
    <p> $ {discont_price}  </p>
    <p> $ {price}  </p>
-   <p> -7 % </p>
+   <p> - { DiscountPrice } % </p>
  </div>
  <Link to={product_url}>
  <p> { title } </p>
