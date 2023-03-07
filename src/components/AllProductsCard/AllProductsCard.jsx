@@ -34,7 +34,7 @@ export default function AllProductsCard({id, image, title, price, discont_price,
   
   const DiscountPrice = Math.round(((price - discont_price) / price) * 100);
  
-  //DiscountPrice  !== 0 ? - { DiscountPrice} % : "No discount"
+
 
   return (
     <div className={s.all_products}>
@@ -52,24 +52,9 @@ export default function AllProductsCard({id, image, title, price, discont_price,
         </p>
         {DiscountPrice !== 0 && <p>{price}$</p>}
         {DiscountPrice!== 0 && <p>-{DiscountPrice}%</p>}
-      
-
-
-     
-         {/* 
-         <p>{ DiscountPrice} ===0 ?  <p>'no dicount on this product'</p> :  <p>{ discont_price }, { DiscountPrice} </p> </p>*/}
- 
-   
-
-
-
-
-
-  
-   </div>
+      </div>
    <button onClick={add_to_cart} >Add to Cart</button>
    </div>
-
-    </div>
+</div>
   )
 }

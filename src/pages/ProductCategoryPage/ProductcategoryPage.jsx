@@ -65,7 +65,7 @@ console.log(NameCtegories);
     <div className={s.grid_product_in_category}>
     {
         products_in_category
-       
+        .filter((el) => !el.hide)
         .map(el => <ProductCard key={el.id} {...el}/>)
       }
       </div>
