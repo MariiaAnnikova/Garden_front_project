@@ -16,6 +16,7 @@ export default function ProductAllPage() {
   useEffect(() => {
         dispatch(load_all_products);
       }, []);
+      
     console.log(load_all_products);
       return (
         <div className={s.product_page}>
