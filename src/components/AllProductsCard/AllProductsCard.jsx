@@ -12,8 +12,9 @@ export default function AllProductsCard({id, image, title, price, discont_price,
 
   const add_to_cart = () => dispatch(addToCart({id, title, image, discont_price, price, count}));
   
-
+  const DiscountPrice = Math.round(((price - discont_price) / price) * 100);
  
+  //DiscountPrice  !== 0 ? - { DiscountPrice} % : "No discount"
 
   return (
     <div className={s.all_products}>
@@ -23,9 +24,28 @@ export default function AllProductsCard({id, image, title, price, discont_price,
    <p>{ title } </p>
    </Link>
    <div className={s.price_all}> 
-   <p> { price } $  </p>
-   <p> {discont_price} $ </p>
-   <p> - 7 %  </p>
+
+   
+        <p className={s.discont_price}>
+          {discont_price}
+          <span>$</span>
+        </p>
+        {DiscountPrice !== 0 && <p>{price}$</p>}
+        {DiscountPrice!== 0 && <p>-{DiscountPrice}%</p>}
+      
+
+
+     
+         {/* 
+         <p>{ DiscountPrice} ===0 ?  <p>'no dicount on this product'</p> :  <p>{ discont_price }, { DiscountPrice} </p> </p>*/}
+ 
+   
+
+
+
+
+
+  
    </div>
    <button onClick={add_to_cart} >Add to Cart</button>
    </div>
