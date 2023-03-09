@@ -1,7 +1,7 @@
 const defaultState = [];
 let first_state = [];
 
-const LOAD_CATEGORY_PRODUCT = 'LOAD_PRODUCT';
+const LOAD_CATEGORY_PRODUCT = 'LOAD_CATEGORY_PRODUCT';
 const SORT_PRODUCT = 'SORT_PRODUCT'
 const SEARCH_PRICE = 'SEARCH_PRICE';
 

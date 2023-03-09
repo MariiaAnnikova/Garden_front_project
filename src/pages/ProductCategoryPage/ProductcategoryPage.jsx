@@ -11,12 +11,10 @@ export default function ProductCategoryPage() {
 
   const { category } = useParams();
 
- 
-
-  console.log(category);
+ console.log(category);
 
   const dispatch = useDispatch();
-  const products_in_category = useSelector(state => state.products)
+  const products_in_category = useSelector(state => state.product)
   const name_categories = useSelector(state => state.categories)
 
  console.log(products_in_category);

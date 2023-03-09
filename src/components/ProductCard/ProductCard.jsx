@@ -17,7 +17,7 @@ export default function ProductCard({id, title, image, discont_price, price, cou
 
  const DiscountPrice = Math.round(((price - discont_price) / price) * 100);
 
-
+ 
 
 
 
@@ -32,15 +32,12 @@ return (
 <button onClick={add_to_cart} >Add to Cart</button>
 </div>
 <div className={s.product_price}>
-<p> $ {price}  </p>
- <p>
- {DiscountPrice === 0 && {price}  } 
-        {DiscountPrice !== 0 && -{DiscountPrice}% {discont_price }}
- </p>
-
-
-  {/*  <p> $ {price}  </p> */}
-  {/*<p> - { DiscountPrice } % </p> */}
+  <p>
+          {discont_price}
+          <span>$</span>
+        </p>
+        {DiscountPrice !== 0 && <p>{price}$</p>}
+        {DiscountPrice!== 0 && <p>-{DiscountPrice}%</p>}
 
  </div>
  <Link to={product_url}>

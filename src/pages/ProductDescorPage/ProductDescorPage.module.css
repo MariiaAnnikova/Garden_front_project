@@ -1,6 +1,7 @@
 .product_descr {
     padding-left: 58px;
     padding-top: 34px;
+    height: 800px;
    
 display: flex;
 flex-direction: row;
@@ -12,7 +13,7 @@ justify-content: space-around;
   
     display: flex;
     flex-direction: row;
-    gap: 150px;
+    gap: 140px;
     line-height: 26px;
     
     
@@ -46,8 +47,8 @@ rgba(0, 0, 0, 1);
 .descr_price p:nth-child(3){
     font-family: Montserrat;
   
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 19px;
     color: 
    
 rgba(255, 50, 161, 1)
